@@ -1,15 +1,15 @@
 #include "main.h"
 /**
   *times_table - Starting with 0, print times table to 9
-  *Return: Always 0  
+  *Return: 0 Always (Success)
   */
 void times_table(void)
 {
 	int a, b, c;
 
-	for (a = 0; a <= 0; a++)
+	for (a = 0; a <= 9; a++)
 	{
-		for (b = 0; b <= 0; b++)
+		for (b = 0; b <= 9; b++)
 		{
 			c = (a * b);
 			if ((c / 10) == 0)

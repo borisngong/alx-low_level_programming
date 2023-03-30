@@ -3,6 +3,7 @@
   *_strncat - Write a function that concatenates two strings.
   *@dest: copying to
   *@src: copying from
+  *@n: Number of character to be copied
   *Return: void
   */
 

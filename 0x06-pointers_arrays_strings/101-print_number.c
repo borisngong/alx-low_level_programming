@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_number - a function that prints an integer.
- * @n: integer parameter
+ * print_number - a function that prints an integer
+ * @n: input integer
  * Return: 0
  */
 
@@ -22,5 +22,6 @@ void print_number(int n)
 	{
 		print_number(n1 / 10);
 	}
-	_putch
+	_putchar((n1 % 10) + '0');
 }
+

@@ -7,7 +7,8 @@
  * @age: Second attribute
  * @owner: Third attribute
  *
- * Description: 
+ * Description: A dog's basic structure cotaining several
+ *related variables age, name, and owner
  */
 struct dog
 {

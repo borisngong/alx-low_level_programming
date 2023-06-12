@@ -1,43 +1,44 @@
-#include "main.h"
 #include <stdlib.h>
+#include "main.h"
+
 /**
- * alloc_grid - a function that concatenates two strings
- * @width: width input
- * @height: height input
- * Return: NULL on failure and a pointer to 2 dim array
+ * **alloc_grid - creates a two dimensional array of integers
+ * @width: width of the grid
+ * @height: height of the grid
+ *
+ * Return: pointer to grid (Success)or NULL (failure)
  */
 int **alloc_grid(int width, int height)
 {
-	int **br;
-	int i, j;
+	int **grid;
+	int n, m;
 
-	if (width <= 0 || height <= 0)
+	if (height <= 0 || width <= 0)
 		return (NULL);
 
-	br = malloc(sizeof(int *) * height);
+	grid = (int **) malloc(sizeof(int *) * height);
 
-	if (br == NULL)
+	if (grid == NULL)
 		return (NULL);
-
-	for (i = 0; i < height; i++)
+	for (n = 0; n < height; n++)
 	{
-		br[i] = malloc(sizeof(int) * width);
-
-		if (br[i] == NULL)
+		grid[n] = (int *) malloc(sizeof(int) * width);
+		if (grid[n] == NULL)
 		{
-			for (; i >= 0; i--)
-				free(br[i]);
-
-			free(br);
+			free(grid);
+			for (m = 0; m <= n; m++)
+				free(grid[m]);
 			return (NULL);
 		}
 	}
 
-	for (i = 0; i < height; i++)
+	for (n = 0; n < height; n++)
 	{
-		for (j = 0; j < width; j++)
-			br[i][j] = 0;
+		for (m = 0; m < width; m++)
+		{
+			grid[n][m] = 0;
+		}
 	}
-
-	return (br);
+	return (grid);
 }
+

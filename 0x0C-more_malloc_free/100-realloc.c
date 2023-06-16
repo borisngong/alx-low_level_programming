@@ -9,7 +9,7 @@
  *
  * Return: pointer to the newly allocated memory block
  * If new_size == old_size do not do anything and return ptr
- * 
+ *
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {

@@ -8,7 +8,7 @@
  */
 int _atoi(char *s)
 {
-	int j; int k; int l; int longi;  int figure; int m;
+	int j, k, l, longi, figure, int m;
 
 	j = 0;
 	k = 0;
@@ -53,7 +53,7 @@ int _atoi(char *s)
  */
 int main(int argc, char *argv[])
 {
-	int solution; int digit1; int digit2;
+	int solution, digit1, digit2;
 
 	if (argc < 3 || argc > 3)
 	{

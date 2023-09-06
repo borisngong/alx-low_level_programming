@@ -22,6 +22,8 @@ char *argstostr(int ac, char **av)
 		longi++;
 	}
 
+	longi += ac;
+
 	s = malloc(sizeof(char) * (longi + 1));
 
 	if (s == NULL)

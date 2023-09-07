@@ -1,13 +1,10 @@
 #include "main.h"
 /**
- * *string_nconcat - concatenates n bytes of a string to another string
- * @s1: string to add to
- * @s2: string to join end-to-end
- * @n: number of bytes to joing s2 t0 s1
- * Return: pointer to the resulting string
- * if nmemb or size is 0, returns NULL
- * if malloc fails, returns NULL.
-
+ * *_memset - fills memory with a constant byte
+ * @s: memory area to be filled
+ * @b: char to copy
+ * @n: number of times to copy b
+ * Return: pointer to the memory area s
  */
 char *_memset(char *s, char b, unsigned int n)
 {
@@ -25,8 +22,9 @@ char *_memset(char *s, char b, unsigned int n)
  * *_calloc - allocates memory for an array
  * @nmemb: number of elements in the array
  * @size: size of each element
- *
  * Return: pointer to allocated memory
+ * if nmemb or size is 0, returns NULL.
+ * if malloc fails, returns NULL
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {

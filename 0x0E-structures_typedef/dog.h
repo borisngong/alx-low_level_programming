@@ -5,7 +5,8 @@
   * @name: dog's name
   * @age: dog's age
   * @owner: dog's owner
-  * Description: structure of dog with memebers  explaning it's basic member informations with different variables
+  * Description: structure of dog with memebers  explaning it's basic
+  * member informations with different variables
   */
 struct dog
 {
@@ -14,10 +15,10 @@ struct dog
 	char *owner;
 
 };
+
 /**
  * dog_t - typedef for dod's structure
  */
-
 typedef struct dog dog_t;
 
 void init_dog(struct dog *d, char *name, float age, char *owner);

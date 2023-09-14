@@ -38,7 +38,7 @@ void print_all(const char * const format, ...)
 				check_status = 1;
 				break;
 		}
-		if (format[k + 1] != '\0' && check_status != 1)
+		if (format[k + 1] != '\0' && check_status != 0)
 			printf(", ");
 		k++;
 	}

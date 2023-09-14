@@ -1,20 +1,20 @@
 #include "variadic_functions.h"
 /**
   * print_all - a function that prints anything
+  *
   * @format: list of types of arguments passed to the function
-  * Return: void
   */
 void print_all(const char * const format, ...)
 {
-	int k, check_status;
+	int k, check_status; //Arg data and declared variables//
 	char *chars;
 	va_list boro;
 
-	va_start(boro, format);
+	va_start(boro, format); /* starting of va_arg arguments */
 	k = 0;
 	while (format != NULL && format[k] != '\0')
 	{
-		switch (format[k])
+		switch (format[k]) /* execution of one code among given alternatives */
 		{
 			case 'i':
 				printf("%d", va_arg(boro, int));
@@ -36,14 +36,13 @@ void print_all(const char * const format, ...)
 				break;
 			default:
 				check_status = 1;
-				break;
+				break; /* end of switch statement */
 		}
-		if (format[k + 1] != '\0' && check_status == 0)
+		if (format[k + 1] != '\0' && check_status == 0) /* if NULL */
 			printf(", ");
 		k++;
 	}
 	printf("\n");
-
-	va_end(boro);
+	va_end(boro); /* end of argument */
 
 }

@@ -35,8 +35,8 @@ void print_all(const char * const format, ...)
 				check_status = 0;
 				break;
 			default:
-				check_status = 1;
-				break; /* end of switch statement */
+				k++;
+				continue; /* end of switch statement */
 		}
 		if (format[k + 1] != '\0' && check_status == 0) /* if NULL */
 			printf(", ");

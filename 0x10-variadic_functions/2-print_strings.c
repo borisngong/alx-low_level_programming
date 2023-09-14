@@ -1,9 +1,15 @@
 #include "variadic_functions.h"
 /**
   * print_strings - prints strings, followed by a new line
+  *
   * @n: number of strings passed to the function
+  *
   * @separator: strings printed between the strings
-  * Return: nothing
+  *
+  * @description: If separator is NULL, string is not printed
+  * and if one of the string is NULL (nil) is printed
+  *
+  * Return: void
   */
 void print_strings(const char *separator, const unsigned int n, ...)
 {

@@ -34,12 +34,13 @@ void print_all(const char * const format, ...)
 				if (chars == NULL)
 					chars = "(nil)";
 				printf("%s", chars);
+				check_status = 0;
 				break;
 			default:
 				check_status = 1;
 				break;
 		}
-		if (format[k + 1] != '\0' && check_status != 1)
+		if (format[k + 1] != '\0' && check_status == 0)
 			printf(", ");
 		k++;
 	}

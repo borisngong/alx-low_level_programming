@@ -5,45 +5,42 @@
   */
 void print_all(const char * const format, ...)
 {
-	int k, check_status;
-	char *chars;
-
+	int k = 0;
+	char *chars, *comma = ", ";
 	va_list boro_argn;
 
 	va_start(boro_argn, format);
-
-	k = 0;
-	while (format != NULL && format[k] != '\0')
+	if (format)
 	{
-		switch (format[k])
+		while (format[k])
 		{
-			case 'c':
-				printf("%c", va_arg(boro_argn, int));
-				check_status = 0;
-				break;
-			case 'i':
-				printf("%d", va_arg(boro_argn, int));
-				check_status = 0;
-				break;
-			case 'f':
-				printf("%f", va_arg(boro_argn, double));
-				check_status = 0;
-				break;
-			case 's':
-				chars = va_arg(boro_argn, char *);
-				if (chars == NULL)
-					chars = "(nil)";
-				printf("%s", chars);
-				check_status = 0;
-				break;
-			default:
-				check_status = 1;
-				break;
+			switch (format[k])
+			{
+				case 'c':
+					printf("%s%c", comma, va_arg(boro_argn, int));
+					break;
+				case 'i':
+					printf("%s%d", comma, va_arg(boro_argn, int));
+					break;
+				case 'f':
+					printf("%s%f", comma, va_arg(boro_argn, double));
+					break;
+				case 's':
+					chars = va_arg(boro_argn, char *);
+					if (!chars)
+						chars = "(nil)";
+					printf("%s%s", comma, chars);
+					break;
+				default:
+					k++;
+					continue;
+			}
+			comma = ", ";
+			k++;
 		}
-		if (format[k + 1] != '\0' && check_status == 0)
-			printf(", ");
-		k++;
 	}
+
 	printf("\n");
 	va_end(boro_argn);
 }
+

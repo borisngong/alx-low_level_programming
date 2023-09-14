@@ -6,7 +6,7 @@
   *
   * @separator: strings printed between the strings
   *
-  * @description: If separator is NULL, string is not printed
+  * Description: If separator is NULL, string is not printed
   * and if one of the string is NULL (nil) is printed
   *
   * Return: void

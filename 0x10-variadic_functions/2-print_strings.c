@@ -13,10 +13,9 @@
   */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
+	va_list boro_argn;
 	unsigned int k;
 	char *chars;
-
-	va_list boro_argn;
 
 	va_start(boro_argn, n);
 
@@ -26,7 +25,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 		if (chars == NULL)
 		{
-			printf("nil");
+			printf("(nil)");
 		}
 		else
 		{

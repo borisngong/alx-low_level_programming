@@ -2,6 +2,7 @@
 /**
   * print_all - a function that prints anything
   * @format: list of types of arguments passed to the function
+  * Return: void
   */
 void print_all(const char * const format, ...)
 {
@@ -42,6 +43,7 @@ void print_all(const char * const format, ...)
 		k++;
 	}
 	printf("\n");
+
 	va_end(boro);
 
 }

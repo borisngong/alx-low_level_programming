@@ -3,7 +3,7 @@
   * print_strings - prints strings, followed by a new line
   * @n: number of strings passed to the function
   * @separator: strings printed between the strings
-  * Return: void
+  * Return: nothing
   */
 void print_strings(const char *separator, const unsigned int n, ...)
 {

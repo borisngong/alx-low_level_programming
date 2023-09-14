@@ -6,7 +6,7 @@
   */
 void print_all(const char * const format, ...)
 {
-	int k, check_status; //Arg data and declared variables//
+	int k, check_status; /*Arg data and declared variables*/
 	char *chars;
 	va_list boro;
 

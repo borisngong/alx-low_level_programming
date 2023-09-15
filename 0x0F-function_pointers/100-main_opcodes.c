@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int count, k;
+	int byte_count, k;
 	char *boro;
 
 	if (argc != 2)
@@ -18,9 +18,9 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	count = atoi(argv[1]);
+	byte_count = atoi(argv[1]);
 
-	if (bytes < 0)
+	if (byte_count < 0)
 	{
 		printf("Error\n");
 		exit(2);
@@ -28,9 +28,9 @@ int main(int argc, char *argv[])
 
 	boro = (char *)main;
 
-	for (k = 0; k < count; k++)
+	for (k = 0; k < byte_count; k++)
 	{
-		if (k == count - 1)
+		if (k == byte_count - 1)
 		{
 			printf("%02hhx\n", boro[k]);
 			break;

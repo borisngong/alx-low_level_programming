@@ -4,7 +4,7 @@
   *  at specified index in the linked list
   * @head: represents the first node of the linked list.
   * @index: specifies the position of the desired node in the linked lis
-  * Return: pointer to node at desired index, NULL (if empty) 
+  * Return: pointer to node at desired index, NULL (if empty)
   */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
@@ -21,6 +21,5 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		ind_positn++;
 
 	}
-	
 	return (NULL);
 }

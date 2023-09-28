@@ -2,7 +2,7 @@
 /**
   * free_listp - responsible for freeing the memory allocated
   * for a linked list
-  * pointer to the head of the linked list
+  * @head: pointer to the head of the linked list
   * Return: (void)
   */
 void free_listp(listp_t **head)

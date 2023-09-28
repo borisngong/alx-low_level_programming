@@ -6,7 +6,7 @@
   */
 void print_binary(unsigned long int n)
 {
-	int k;
+	int k; 
 	int significant_bits = 0;
 	unsigned long int current_bit;
 
@@ -19,7 +19,7 @@ void print_binary(unsigned long int n)
 			_putchar('1');
 			significant_bits++;
 		}
-		else if (significant_bits++)
+		else if (significant_bits)
 		{
 			_putchar('0');
 		}

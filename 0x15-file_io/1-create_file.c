@@ -12,12 +12,12 @@ int create_file(const char *filename, char *text_content)
 	int l_write;
 	int l_longii;
 
-	if(!filename)
+	if (filename == NULL)
 		return (-1);
 
 	if (text_content != NULL)
 	{
-		for(l_longii = 0; text_content[l_longii];)
+		for (l_longii = 0; text_content[l_longii];)
 			l_longii++;
 	}
 
@@ -31,12 +31,8 @@ int create_file(const char *filename, char *text_content)
 	for (l_write = 0; text_content[l_longii];)
 		l_longii++;
 	l_write = write(fd, text_content, l_longii);
-	
 	if (l_write == -1)
 		return (-1);
 	close(fd);
-	
 	return (1);
-
-	
 }

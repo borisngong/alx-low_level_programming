@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
   * allocate_buf - creates a buffer of 1024 bytes and returns a pointer to the newly allocated buffer
   * @file: a pointer to char, which will store the memory address of the allocated buffer
@@ -50,7 +51,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp source_fd destination_fd\n");
 		exit(98);
 	}
 

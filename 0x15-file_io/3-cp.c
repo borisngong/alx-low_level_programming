@@ -1,5 +1,9 @@
 #include "main.h"
 
+char *allocate_buf(char *file);
+void safe_close_file(int fd);
+
+
 /**
   * allocate_buf - creates a buffer of 1024 bytes and returns a pointer
   * to the newly allocated buffer
@@ -31,9 +35,9 @@ char *allocate_buf(char *file)
   */
 void safe_close_file(int fd)
 {
-	int close_status = close(fd);
+	int status_close = close(fd);
 
-	if (close_status == -1)
+	if (status_close == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);

@@ -1,5 +1,6 @@
 /**
- * hash_djb2 - Hash function responsible to compute hash of a string using djb2 algorithm
+ * hash_djb2 - Hash function responsible to compute hash of a
+ * string using djb2 algorithm
  * @str: represents the string to hash
  *
  * Return: Value of the hash

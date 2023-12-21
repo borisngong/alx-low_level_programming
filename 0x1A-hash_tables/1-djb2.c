@@ -1,3 +1,4 @@
+#include "hash_tables.h"
 /**
  * hash_djb2 - Hash function responsible to compute hash of a
  * string using djb2 algorithm

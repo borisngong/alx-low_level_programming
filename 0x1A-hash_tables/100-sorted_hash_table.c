@@ -152,7 +152,8 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 }
 
 /**
- * shash_table_print - Prints the key-value pairs from a hash table.
+ * shash_table_print - responsible for printing the key-value pairs
+ * from a hash table.
  * @ht: Pointer to the hash table.
  */
 void shash_table_print(const shash_table_t *ht)
@@ -179,7 +180,8 @@ void shash_table_print(const shash_table_t *ht)
 }
 
 /**
- * shash_table_print_rev - Prints the key-value pairs from a hash table in reverse.
+ * shash_table_print_rev - responsible for printing the key-value pairs from
+ * a hash table in reverse.
  * @ht: Pointer to the hash table.
  */
 void shash_table_print_rev(const shash_table_t *ht)
@@ -206,7 +208,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 }
 
 /**
- * shash_table_delete - Deletes a sorted hash table.
+ * shash_table_delete - responsible for deleting a sorted hash table.
  * @ht: Pointer to the hash table.
  */
 void shash_table_delete(shash_table_t *ht)

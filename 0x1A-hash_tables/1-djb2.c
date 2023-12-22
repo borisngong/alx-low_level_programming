@@ -1,8 +1,8 @@
 #include "hash_tables.h"
 
 /**
- * hash_djb2 - function responsible to compute hash of 'str' using djb2
- * @str: represents string to hash
+ * hash_djb2 - hash function responsible to compute hash of 'str' using djb2
+ * @str: represents the string to hash
  *
  * Return: value of 64 bits hash
  */

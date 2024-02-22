@@ -3,19 +3,26 @@
 
 
 def island_perimeter(grid):
-    perimeter = 0
-    rows = len(grid)
-    cols = len(grid[0])
+    """Return the perimiter of an island.
 
-    """Iterate through each cell in the grid"""
-    for k in range(rows):
-        for j in range(cols):
-            """If the current cell is land"""
-            if grid[k][j] == 1:
-                """Check its neighbors to determine the perimeter"""
-                perimeter += 4
-                if k > 0 and grid[k - 1][j] == 1:
-                    perimeter -= 2
-                if j > 0 and grid[k][j - 1] == 1:
-                    perimeter -= 2
-    return perimeter
+    Water is represented by 0 and land by 1 by the grid.
+
+    Args:
+        grid (list): A list of list of integers representing an island.
+    Returns:
+        The perimeter of the island defined in grid.
+    """
+    width = len(grid[0])
+    height = len(grid)
+    edges = 0
+    size = 0
+
+    for i in range(height):
+        for j in range(width):
+            if grid[i][j] == 1:
+                size += 1
+                if (j > 0 and grid[i][j - 1] == 1):
+                    edges += 1
+                if (i > 0 and grid[i - 1][j] == 1):
+                    edges += 1
+    return size * 4 - edges * 2
